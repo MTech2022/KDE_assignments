@@ -6,7 +6,7 @@ plot.style.use('fivethirtyeight')
 
 
 df = pd.read_csv("./data/ADANIPORTS.csv")
-#We are using these Attribute: ['Date','Volume', 'High','Low','Close','Open']
+#Attribute: ['Date','Volume', 'High','Low','Close','Open']
 print("~~~~~~~~~: i. Plot the temporal change of attributes High and Low values :~~~~~~~~~");
 print("CLOSE current plot figure to open next plot-------------------\n");
 plot.figure(figsize=(12, 6))
