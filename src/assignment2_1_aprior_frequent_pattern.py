@@ -1,7 +1,7 @@
 import pandas as pd
 from apyori import apriori
 
-dataFrame = pd.read_csv('data/store_data.csv', header=None)
+dataFrame = pd.read_csv('../data/store_data.csv', header=None)
 dataFrame.fillna(0, inplace=True);  # fill NaN to 0
 
 transactions = []

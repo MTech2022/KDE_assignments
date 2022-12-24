@@ -38,7 +38,7 @@ def find_correlation(data_sets, attr1, attr2):
 
 
 # Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
-data_sets = pd.read_csv("./data/diabetes.csv")
+data_sets = pd.read_csv("../data/diabetes.csv")
 
 print(
     "i. Write a function which takes the datafile and attribute as parameters and \n"
