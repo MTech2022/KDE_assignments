@@ -3,15 +3,13 @@ from sklearn import tree
 from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-
+import pandas as pd
 
 def load_iris_data_set():
     iris = load_iris()
-    # TODO : i was trying to read csv file for decision tree
-    # irisFile = pd.read_csv("./data/Iris.csv")
-    # for i, ir in enumerate(irisFile):
-    #     data[i] = np.asarray(ir[:-1], dtype=np.float)
-    #     target[i] = np.asarray(ir[-1], dtype=int)
+    irisFile = pd.read_csv("../data/Iris.csv")
+    print(irisFile.info())
+    print(irisFile.describe())
     return iris
 
 
@@ -29,6 +27,8 @@ def train_data_model(iris):
 
 if __name__ == '__main__':
     iris_data = load_iris_data_set()
+    print("")
+    print(iris_data)
     print("iris dataset keys")
     print(iris_data.keys())
     print("iris dataset values")
