@@ -1,9 +1,10 @@
 import numpy as np
 from numpy import linalg as LA
 
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("=======================================START===================================================================")
 print(
-    "i. Create multi-dimensional arrays and find its shape and dimension\n---------------------------------------------------");
+    "i. Create multi-dimensional arrays and find its shape and dimension\n"
+    "----------------------------------------------------------------------------------------------------------------");
 A = np.array([
     [18, 19, 20],
     [21, 22, 23],
@@ -37,13 +38,15 @@ print("\nExample 1 :  Below is the array of ones");
 print(A)
 print("---------------------------------------------------");
 
-print("\n\niii. Reshape and flatten data in the array\n--------------------------------------");
+print("\n\niii. Reshape and flatten data in the array\n"
+      "--------------------------------------");
 A = np.arange(9).reshape((3, 3))
 print(A)
 z = A.flatten();
 print(f"\nAbove array is flatten................... as {z}");
 
-print("\n\niv. Append data vertically and horizontally\n---------------------------------------------------");
+print("\n\niv. Append data vertically and horizontally\n"
+      "---------------------------------------------------");
 A = np.append([1, 2, 3], [[4, 5, 6], [7, 8, 9]])
 print(A);
 
@@ -51,7 +54,8 @@ print("---------------------------------------------------");
 A = np.append([[1, 1, 1], [2, 2, 2]], [[3, 3, 3]], axis=0)
 print(f"{A}");
 
-print("\n\nv. Apply indexing and slicing on array\n---------------------------------------------------")
+print("\n\nv. Apply indexing and slicing on array\n"
+      "---------------------------------------------------")
 # Slicing in Python refers to extracting a subset or specific part of the
 # sequence list, tuple, or string in a specific range.
 # While indexing refers to accessing a single element from an array, it is used to get slices of arrays.
@@ -67,7 +71,8 @@ print("\nExample 2 : ----------------------slice(0,2,1)-------------------------
 B = A[0:2:1]
 print(B)
 
-print("\n\nvi. Dot and matrix product of two arrays\n---------------------------------------------------");
+print("\n\nvi. Dot and matrix product of two arrays\n"
+      "---------------------------------------------------");
 arr1 = [[1, 1],
         [1, 1]]
 arr2 = [[4, 1],
@@ -100,7 +105,8 @@ print(f"Matrix Product of \n{arr1} x \n{arr2} is =")
 print("------------------")
 print(matrix_product)
 
-print("\n\nvii. Compute the Eigen values of a matrix\n---------------------------------------------------")
+print("\n\nvii. Compute the Eigen values of a matrix\n"
+      "---------------------------------------------------")
 print("Example 1-------------------")
 A = np.array([[1, 2], [4, 5]])
 eigvals = LA.eigvals(A)
@@ -112,19 +118,22 @@ print("Input pmatrix : \n", A)
 eigvals = LA.eigvals(A)
 print("Eigen value \n", eigvals)
 
-print("\n\nviii. Compute the multiplicative inverse of a matrix\n---------------------------------------------------")
+print("\n\nviii. Compute the multiplicative inverse of a matrix\n"
+      "---------------------------------------------------")
 A = np.array([[1, 2], [3, 4]])
 ainv = LA.inv(A)
 print("Input pmatrix : \n", A)
 print("Inverse : \n", ainv)
 
-print("\n\nix. Compute the rank of a matrix\n---------------------------------------------------")
+print("\n\nix. Compute the rank of a matrix\n"
+      "---------------------------------------------------")
 A = np.array([[1, 2], [3, 4]])
 rank = LA.matrix_rank(A)
 print("Input pmatrix : \n", A)
 print("Rank : ", rank)
 
-print("\n\nx. Compute the length of a vector\n---------------------------------------------------")
+print("\n\nx. Compute the length of a vector\n"
+      "---------------------------------------------------")
 A = np.array([[1, 2, 3],
               [-1, 1, 4]])
 vectorLength = LA.norm(A)

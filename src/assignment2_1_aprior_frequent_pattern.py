@@ -1,22 +1,27 @@
 import pandas as pd
 from apyori import apriori
 
+print("==========================================================================================================")
+print(
+    "1. Implement the following algorithms in Python for finding the frequent itemsets.\n"
+    "\ti. Apriori algorithm\n"
+    "-------------------------------------------------------------------------------------------------------------\n")
+
 dataFrame = pd.read_csv('../data/store_data.csv', header=None)
-dataFrame.fillna(0, inplace=True);  # fill NaN to 0
+dataFrame.fillna(0, inplace=True)  # fill NaN to 0
 
 transactions = []
 for i in range(0, len(dataFrame)):
     transactions.append([str(dataFrame.values[i, j]) for j in range(0, 20) if str(dataFrame.values[i, j]) != '0'])
-print("--------------------------------------------------------------------------");
-print("Total number of Data for the apriori frequent pattern ", len(transactions));
-print("--------------------------------------------------------------------------");
+print("Total number of Data for the apriori frequent pattern ", len(transactions))
+print("--------------------------------------------------------------------------")
 # print("=================================Data for the apriori frequent pattern finding=================================");
 # for idx, i in enumerate(transactions):
 #     print(f"{idx} :{i}")
 #     print("---------------------------------------------------------------------------------------------------------------------------------");
 
 print(
-    "\nExample 1 : .................................................................With min_support=0.003..............................................................................................\n")
+    "\nExample 1 : .........................................................With min_support=0.003................................................................\n")
 associationRules = apriori(transactions, min_support=0.003, min_confidence=0.2, min_lift=3, min_length=2)
 aprioriRuleResults = list(associationRules)
 print("Total Association Rules (With min_support=0.003) : ", len(aprioriRuleResults))
@@ -26,7 +31,7 @@ print(
     "``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````")
 
 print(
-    "\n\nExample 2 : .................................................................with min_support=0.004..............................................................................................\n")
+    "\n\nExample 2 : ..................................................with min_support=0.004....................................................................\n")
 associationRules = apriori(transactions, min_support=0.004, min_confidence=0.2, min_lift=3, min_length=2)
 aprioriRuleResults = list(associationRules)
 print("Total Association Rules (with min_support=0.004): ", len(aprioriRuleResults))

@@ -1,6 +1,11 @@
 import matplotlib.pyplot as plot  # For plotting graphs
 import pandas as pd
 
+print("==============================================================================================================\n"
+      "3. Write Python program to do the following: \n"
+      "Use the stock market data from Kaggle which has the following Attribute: Date, Volume,High, Low, Closing Price\n"
+      "---------------------------------------------------------------------------------------------------------------\n")
+
 # https://matplotlib.org/stable/gallery/style_sheets/fivethirtyeight.html
 plot.style.use('fivethirtyeight')
 

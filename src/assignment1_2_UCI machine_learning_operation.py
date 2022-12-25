@@ -40,10 +40,11 @@ def find_correlation(data_sets, attr1, attr2):
 # Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
 data_sets = pd.read_csv("../data/diabetes.csv")
 
-print("-----------------------------------------------------------------------------\n"
+print("==============================================================================================================\n"
     "i. Write a function which takes the datafile and attribute as parameters and \n"
     "computes the basic statistics for that attribute : numObj, minValue, maxValue, mean, stdev,Q1, median, Q3, IQR.\n"
-    "Write a main program that computes the basic statistics for every attribute of the datafile and displays it.\n");
+    "Write a main program that computes the basic statistics for every attribute of the datafile and displays it.\n"
+    "---------------------------------------------------------------------------------------------------------------");
 print("----------------Data description : count,mean,std,min,25%,50%,75%,max-------------------------------------------")
 
 print(data_sets.describe())

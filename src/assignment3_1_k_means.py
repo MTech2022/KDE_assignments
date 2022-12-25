@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
 
+print("==============================================================================================================\n"
+      "III.Implement the following algorithms in Python\n"
+      "\ti. K-means Algorithm\n"
+      "-------------------------------------------------------------------------------------------------------------\n\n")
+
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 dataset = pd.read_csv('../data/Mall_Customers.csv')  
 x = dataset.iloc[:, [3]].values 
